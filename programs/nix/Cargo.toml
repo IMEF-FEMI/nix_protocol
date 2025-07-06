@@ -1,0 +1,58 @@
+[package]
+name = "nix"
+version = "0.1.0"
+description = "nix: A decentralized lending orderbook on Solana"
+authors = ["Your Name <your.email@example.com>"]
+license = "Apache-2.0"
+edition = "2021"
+
+[features]
+no-entrypoint = []
+cpi = ["no-entrypoint"]
+default = []
+
+[lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = [
+    'cfg(target_os, values("solana"))',
+]
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "nix"
+
+
+[dependencies]
+hypertree = { workspace = true }
+solana-program = { workspace = true }
+fixed = { workspace = true }
+bytemuck = { workspace = true }
+static_assertions = { workspace = true }
+borsh = { workspace = true }
+thiserror = { workspace = true }
+spl-token = { workspace = true}
+spl-token-2022 = { workspace = true }
+num_enum = { workspace = true}
+shank = { workspace = true}
+type-layout = { workspace = true }
+cfg-if = { workspace = true }
+enum_dispatch = { workspace = true }
+pyth-sdk-solana = { workspace = true }
+pyth-solana-receiver-sdk = { workspace = true }
+switchboard-on-demand = { workspace = true }
+fixed-macro ={ workspace = true}
+marginfi ={ workspace = true}
+# marginfi-type-crate ={ workspace = true}
+solana-invoke = { workspace = true }
+sha2 = { workspace = true }
+solana-security-txt = { workspace = true }
+
+# [dev-dependencies]
+# test-utilities = { workspace = true }
+# spl-transfer-hook-interface = { workspace = true }
+# solana-cli-output = { workspace = true }
+# solana-client = { workspace = true }
+# solana-sdk = { workspace = true }
+# solana-logger = { workspace = true }
+# solana-program-test = { workspace = true }
+# solana-account-decoder = { workspace = true }

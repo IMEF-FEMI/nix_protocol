@@ -1,0 +1,64 @@
+[workspace]
+resolver = "2"  
+members = [
+    "lib/hypertree", 
+    "programs/nix"
+]
+
+
+[workspace.dependencies]
+hypertree = { path = "lib/hypertree" }  
+solana-program = "=2.1.20"
+thiserror = "1.0.63"
+spl-token = { version = "=7", features = ["no-entrypoint"] }
+spl-token-2022 = { version = "=6", features = ["no-entrypoint"] }
+spl-associated-token-account = { version = "6", features = ["no-entrypoint"] }
+marginfi = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3",  package = "marginfi", features = ["no-entrypoint"] }
+# marginfi-type-crate = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3" }
+num_enum = "=0.5.11"
+shank = "0.4.2"
+solana-invoke = "0.2.0"
+sha2 = "0.10"
+solana-security-txt = "1.1.0"
+
+
+# [dev-dependencies]
+test-utilities = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3"}
+spl-transfer-hook-interface = "0.9.0"
+solana-cli-output = "=2.1.20"
+solana-client = "=2.1.20"
+solana-sdk = "=2.1.20"
+solana-logger = "=2.1.20"
+solana-program-test = "=2.1.20"
+solana-account-decoder = "=2.1.20" 
+# fixed = "0.5.7"         
+
+type-layout = "0.2.0"
+cfg-if = "1.0"
+enum_dispatch = "0.3.11"      
+pyth-sdk-solana = "0.10.4" 
+pyth-solana-receiver-sdk="0.6.0" 
+switchboard-on-demand = "0.3.5"
+fixed-macro = "1.2.0"
+
+
+
+borsh = {version = "0.10.4"}
+fixed = "=1.28.0"
+bytemuck = "1.22.0"
+static_assertions = "=1.1.0"
+
+# borsh = {version = "1.5.7"}
+# calltrace = { git = "https://github.com/Certora/solana-cvt.git" }
+# cvt-macros = { git = "https://github.com/Certora/solana-cvt.git" }
+# cvt = { git = "https://github.com/Certora/solana-cvt.git" }
+# nondet = { git = "https://github.com/Certora/solana-cvt.git" }
+
+
+## Notes for usable lockfile generation in Solana land
+# OUTDATED Patch a version of half compatible with fixed and Rust <=1.79:
+# cargo update -p half --precise 2.4.1
+
+
+# to get keypair starting with a keyword
+# solana-keygen grind --starts-with Nix:1
