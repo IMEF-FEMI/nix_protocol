@@ -13,8 +13,8 @@ thiserror = "1.0.63"
 spl-token = { version = "=7", features = ["no-entrypoint"] }
 spl-token-2022 = { version = "=6", features = ["no-entrypoint"] }
 spl-associated-token-account = { version = "6", features = ["no-entrypoint"] }
-marginfi = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3",  package = "marginfi", features = ["no-entrypoint"] }
-# marginfi-type-crate = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3" }
+marginfi = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "c5eef8be4e79619cf84190f08e6ee027cf92c87f",  package = "marginfi", features = ["no-entrypoint"] }
+# marginfi-type-crate = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "c5eef8be4e79619cf84190f08e6ee027cf92c87f" } 
 num_enum = "=0.5.11"
 shank = "0.4.2"
 solana-invoke = "0.2.0"
@@ -22,8 +22,8 @@ sha2 = "0.10"
 solana-security-txt = "1.1.0"
 
 
-# [dev-dependencies]
-test-utilities = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "5e7840b5ce8edbc201ba95d44bdbeb279d30b4e3"}
+
+test-utilities = {git = "https://github.com/mrgnlabs/marginfi-v2.git", rev = "c5eef8be4e79619cf84190f08e6ee027cf92c87f"}
 spl-transfer-hook-interface = "0.9.0"
 solana-cli-output = "=2.1.20"
 solana-client = "=2.1.20"
@@ -31,7 +31,7 @@ solana-sdk = "=2.1.20"
 solana-logger = "=2.1.20"
 solana-program-test = "=2.1.20"
 solana-account-decoder = "=2.1.20" 
-# fixed = "0.5.7"         
+    
 
 type-layout = "0.2.0"
 cfg-if = "1.0"

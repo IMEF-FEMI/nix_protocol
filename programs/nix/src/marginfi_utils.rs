@@ -685,7 +685,7 @@ pub fn get_oracle_price<'a>(
     let adapter =
         OraclePriceFeedAdapter::try_from_bank_config(bank_config, oracle_accounts, clock)?;
 
-    let price = adapter.get_price_of_type(oracle_price_type, price_bias)?;
+    let price = adapter.get_price_of_type(oracle_price_type, price_bias, bank_config.oracle_max_confidence)?;
     Ok(price)
 }
 
